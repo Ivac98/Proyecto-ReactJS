@@ -1,0 +1,89 @@
+.NavBar {
+    height: 120px;
+    background-color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 10px double #8598cd;
+    box-shadow: rgb(0, 0, 0, 0.30) 0 10px 10px 2px;
+}
+.NavBar .Logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.NavBar .Logo img{
+    height: 100px;
+    width: 100px;
+}
+.NavBar .Logo h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3c4471;
+    font-size: 60px;
+    font-family: "Segoe Print", Tahoma, Geneva, Verdana, sans-serif;
+}
+.NavBar .Logo h1 span{
+    color: #8598cd;
+    font-family: "Consolas", Courier, monospace;
+}
+.NavBar .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.NavBar .nav .links {
+    display: flex;
+    font-size: 30px;
+    gap: 30px;
+}
+.links a {
+    color: #3c4471;
+    padding: 8px;
+}
+.NavBar .links a:hover {
+    color: #2d2d2d;
+    transition: 0.1s;
+    background-color: #3c4471;
+    border-radius: 5px;
+}
+.SubCategory {
+    float: left;
+    overflow: hidden;
+}
+.Category button {
+    font-size: 30px;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    background-color: inherit;
+    font-family: inherit;
+}
+.SubCategory {
+    display: none;
+    position: absolute;
+    gap: 20px;
+    background-color: #3c4471;
+    border-radius: 4px;
+    z-index: 1;
+    padding: 5px;
+
+} 
+.SubCategory a {
+    color: #2d2d2d;
+}
+.SubCategory li {
+    display: flex;
+}
+.Category:hover .SubCategory{
+    display: block;
+    -webkit-box-shadow: rgb(0, 0, 0, 0.30) 0 0 10px 5px;
+    box-shadow: rgb(0, 0, 0, 0.30) 0 0 10px 5px;
+}
+.SubCategory li:hover {
+    outline: 2px solid #8598cd;
+    border-radius: 2px;
+}
