@@ -1,0 +1,27 @@
+.Count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.SetToCart {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.SetToCart span{
+    font-size: 20px;
+}
+.SetToCart button {
+    width: 45px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #8598cd;
+}
+.AddToCart button{
+    font-size: 20px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #8598cd;
+}

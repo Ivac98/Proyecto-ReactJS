@@ -1,24 +1,29 @@
-.item-card {
+.ItemCard {
     display: flex;
+    align-items: start;
     flex-direction: column;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: 1px solid #2d2d2d;
+    border-radius: 16px;
     padding: 16px;
-    margin-bottom: 16px;
   }
   .item-image {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 8px;
+    border-radius: 10px;
+    padding-bottom: 10px;
   }
   .item-details {
     display: flex;
+    align-items: end;
     flex-direction: column;
+    align-items: start;
+    gap: 8px;
   }
   .item-name {
-    margin-bottom: 8px;
+    font-size: 24px;
+    margin-bottom: 10px;
   }
-  .item-price {
+  .item-details p{
     font-weight: bold;
+    font-size: 20px;
   }

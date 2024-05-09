@@ -1,0 +1,11 @@
+.item-list-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.item-list-container h1 {
+    font-size: 60px;
+    color: #2d2d2d;
+}
