@@ -1,8 +1,6 @@
-# React + Vite
+# Proyecto final de ReactJS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Simulación de un ecommerce "MercadoIvst"
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Esto es un proyecto realizado para la clase de reactJs en Coderhouse, no posee utilidad alguna. Realizado con **Vite** y **ReactJs**.
+Los productos, tanto como su nombre, precio y descripcion son inventados y con humor.

@@ -1,5 +1,5 @@
 .NavBar {
-    height: 12vh;
+    height: 125px;
     background-color: #2d2d2d;
     display: flex;
     align-items: center;
@@ -12,10 +12,16 @@
     align-items: center;
     justify-content: center;
 }
+.NavBar .Logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .NavBar .Logo img{
     height: 100px;
     width: 100px;
 }
+
 .NavBar .Logo h1 {
     display: flex;
     align-items: center;

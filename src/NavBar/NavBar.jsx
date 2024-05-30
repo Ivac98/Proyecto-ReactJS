@@ -1,6 +1,6 @@
-import Cart from './CartWidget';
-import Logo from '../assets/images/Marca.png'
 import './NavBar.css'
+import Logo from '../assets/images/Marca.png'
+import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
 
 
@@ -31,7 +31,7 @@ const NavBar = () => {
                         <li><Link to="/cart">Carrito</Link></li>
                     </div>
                 </ul>
-                <Cart></Cart>
+                <CartWidget></CartWidget>
             </div>
         </div>
     )
