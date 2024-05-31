@@ -1,0 +1,95 @@
+
+.checkout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+}
+.columna1 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 40px;
+    gap: 20px;
+}
+.columna1 form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+.columna1 div {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+.columna1 input {
+    width: 500px;
+    height: 30px;
+}
+.columna1 span {
+    font-size: 14px;
+}
+.columna1 button {
+    width: max-content;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #8598cd;
+    padding: 0 10px;
+    border-right: 2px solid #2d2d2d;
+    border-left: 2px solid #2d2d2d;
+}
+.columna2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.columna2 div img{
+    width: 100px;
+}
+.checkProducts,
+.checkProductsTop {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+    border-bottom: 1px solid #2d2d2d;
+}
+
+.finalPrice {
+    font-size: 40px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-top: 20px;
+}
+.finalPrice b {
+    color: #8598cd;
+}
+.finishShoping div{
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+.finishShoping button,
+.finishShoping a {
+    background: #2d2d2d;
+    border: none;
+    border-radius: 100px;
+    padding: 10px 40px;
+    font-size: 30px;
+    color: #8598cd;
+}
+.finishShoping img {
+    width: 300px;
+}
+.error {
+    color: red;
+}

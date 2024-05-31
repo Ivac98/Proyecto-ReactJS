@@ -1,7 +1,10 @@
+import './Checkout.css'
 import { Link } from "react-router-dom";
 import { CartContext } from "../CartContext/CartContex";
 import { useState, useContext } from "react"
 import { addDoc, collection, getFirestore } from "firebase/firestore";
+import EmptyCart from "../assets/images/emptyCart.png"
+import DoneCart from "../assets/images/shopping.png"
 
 const Checkout = () => {
     const { cart, getSumaProducts, clear, getTotalProducts } = useContext(CartContext)
@@ -50,38 +53,43 @@ const Checkout = () => {
         })
     }
 
+    
     if (orderId) {
         return (
-            <div>
+            <div className="finishShoping">
                 <div>
+                    <img src={DoneCart} alt="" />
                     <p>¡Compra realizada!. Tu numero de compra es <b>{orderId}</b></p>
+                    <span>Por favor, guarde este numero</span>
+                    <button><Link to={"/"}>Volver al Menu Principal</Link></button>
                 </div>
             </div>
         )
     }
     if (getTotalProducts() == 0) {
         return (
-            <div>
-                <h3>Carrito vacio</h3>
-                <h4>Visita la tienda para comenzar a llenar el carrito</h4>
-                <button><Link to="/">Tienda Principal</Link></button>
+            <div className="emptyCart">
+                <img src={EmptyCart} alt="" />
+                <h3>¡¡Tu Carrito esta <p>Vacio</p>!!</h3>
+                <h4>Visita la tienda para comenzar a buscar productos</h4>
+                <button><Link to="/">VOLVER A LA TIENDA</Link></button>
             </div>
         )
     }
     return (
         <div>
-            <div>
+            <div className="checkout">
                 <div className="columna1">
                     <form>
                         <div>
                             <label>Nombre*</label>
                             <input type="text" onInput={(event) => { setNombre(event.target.value) }} />
-                            <div>{nombreError}</div>
+                            <div className="error">{nombreError}</div>
                         </div>
                         <div>
                             <label>Email*</label>
                             <input type="text" onInput={(event) => { setEmail(event.target.value) }} />
-                            <div>{emailError}</div>
+                            <div className="error">{emailError}</div>
                         </div>
                         <div>
                             <label>Telefono</label>
@@ -90,32 +98,37 @@ const Checkout = () => {
                         <div>
                             <label>Dirección*</label>
                             <input type="text" onInput={(event) => { setDireccion(event.target.value) }} />
-                            <div>{direccionError}</div>
+                            <div className="error">{direccionError}</div>
                         </div>
                         <span>*Campos obligatorios</span>
-                        <div>
-                            <button type="button" onClick={OrderGen}>Generar Orden</button>
-                        </div>
                     </form>
+                    <div>
+                        <button type="button" onClick={OrderGen}>Generar Orden</button>
+                    </div>
                 </div>
                 <div className="columna2">
-                    {
-                        <div>
-                            {cart.map(item => (
-                                <tr key={item.id}>
-                                    <td><img src={item.image} alt={item.name} /></td>
-                                    <td>{item.name}</td>
-                                    <td>{item.price}</td>
-                                    <td>x{item.quantity}</td>
-                                    <td>{item.quantity * item.price}</td>
-                                </tr>
-                            ))}
-                            <div>
-                                <p>Precio Final</p>
-                                <p><b>${getSumaProducts()}</b></p>
-                            </div>
-                        </div>
-                    }
+                    <div>
+                        <tr className="checkProductsTop">
+                            <p>Imagen</p>
+                            <p>Nombre</p>
+                            <p>Precio unitario</p>
+                            <p>Cantidad</p>
+                            <p>Precio total</p>
+                        </tr>
+                        {cart.map(item => (
+                            <tr key={item.id} className="checkProducts">
+                                <td><img src={item.image} alt={item.name} /></td>
+                                <td>{item.name}</td>
+                                <td>${item.price}</td>
+                                <td>x{item.quantity}</td>
+                                <td>${item.quantity * item.price}</td>
+                            </tr>
+                        ))}
+                    </div>
+                    <div className="finalPrice">
+                        <p>Precio Final:</p>
+                        <p><b>${getSumaProducts()}</b></p>
+                    </div>
                 </div>
             </div>
         </div>

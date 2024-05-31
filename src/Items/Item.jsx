@@ -5,9 +5,9 @@ import './Item.css'
 const Item = ({ items }) => {
     return (
         <div className="ItemCard">
-            <img src={items.image} alt={items.name} className="item-image"/>
+            <h3 className="item-name">{items.name}</h3>
             <div className="item-details">
-                <h3 className="item-name">{items.name}</h3>
+                <img src={items.image} alt={items.name} className="item-image"/>    
                 <p>Precio: ${items.price}</p>
                 <Link to={`/item/${items.id}`}>Ver Detalles</Link>
             </div>

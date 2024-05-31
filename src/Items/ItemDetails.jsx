@@ -2,27 +2,37 @@ import { useContext } from 'react';
 import ItemCount from './ItemCount';
 import './ItemDetails.css'
 import { CartContext } from '../CartContext/CartContex';
+import { Link } from 'react-router-dom';
 
 const ItemDetails = ({ item }) => {
-    const {addItem} = useContext(CartContext);
+    const { addItem } = useContext(CartContext);
 
     const onAdd = (quantity) => {
         addItem(item, quantity)
     }
 
     return (
-        <div className="ItemDetailBox">
-            <div className="ItemDetailTop">
-                <h3 className="ItemDetailName">{item.name}</h3>
+        <div>
+            <div className="topDetailNav">
+                <span><Link to={"/"}>Home </Link> / </span>
+                <span><Link to={`/category/${item.category}`}>{item.category}</Link> / </span>
+                <span><Link to={"/category/:categoryId"}>{item.name}</Link></span>
             </div>
-            <img src={item.image} alt={item.name} className="ItemDetailImage"/>
-            <div className="ItemDetails">
-                <h4>{item.description}</h4>
-                <p>Precio: ${item.price}</p>
-                <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
-                <span>Stock disponible: {item.stock}</span>
+            <div className="ItemDetailBox">
+                <img src={item.image} alt={item.name} className="ItemDetailImage" />
+                <div className="ItemDetails">
+                    <div className="TopDetails">
+                        <h3 className="ItemDetailName">{item.name}</h3>
+                        <h4>{item.description}</h4>
+                    </div>
+                    <div className="BottonDetail">
+                        <p>Precio: <b>${item.price}</b></p>
+                        <ItemCount initial={1} stock={item.stock} onAdd={onAdd} />
+                    </div>
+                </div>
             </div>
         </div>
+
     )
 }
 

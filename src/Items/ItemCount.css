@@ -1,8 +1,8 @@
 .Count {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-between;
+    flex-direction: column;
 }
 .SetToCart {
     display: flex;
@@ -12,16 +12,40 @@
 .SetToCart span{
     font-size: 20px;
 }
-.SetToCart button {
-    width: 45px;
+.SetToCart button{
+    font-size: 20px;
     height: 40px;
-    border-radius: 5px;
-    background-color: #8598cd;
+    padding: 0 10px;
+    border: none;
+    border-radius: 200px;
+    background-color: #2d2d2d;
+    color: #f5f5f5;
+    cursor: pointer;
 }
 .AddToCart button{
     font-size: 20px;
-    height: 40px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #8598cd;
+    height: 55px;
+    border: none;
+    padding: 0 30px;
+    border-radius: 200px;
+    background-color: #2d2d2d;
+    color: #f5f5f5;
+    cursor: pointer;
+    width: 250px;
+}
+.endShop {
+    color: #2d2d2d;
+    font-size: 20px;
+    width: 250px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addCart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
 }

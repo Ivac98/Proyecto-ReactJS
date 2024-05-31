@@ -7,7 +7,6 @@ import { CartContext } from '../CartContext/CartContex';
 const CartWidget = () => {
     const { getTotalProducts } = useContext(CartContext);
 
-    if (getTotalProducts() > 0) {
         return (
             <Link to="/cart">
                 <button className='cart'>
@@ -16,7 +15,6 @@ const CartWidget = () => {
                 </button>
             </Link>
         )
-    }
 };
 
 export default CartWidget;

@@ -2,43 +2,71 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    background-color: #2d2d2d;
-    width: 50vw;
-    margin: 50px;
+    flex-direction: row;
+    width: max-content;
+    margin-top: 20px;
     padding: 50px;
-    gap: 10px;
-    border: 5px solid #3c4471;
-    border-radius: 10px;
-    -webkit-box-shadow: rgb(0, 0, 0, 0.30) 0 0 10px 10px;
-    box-shadow: rgb(0, 0, 0, 0.30) 0 0 10px 10px;
+    gap: 50px;
 }
-.ItemDetailImage{
+
+.ItemDetails {
+    width: 40vw;
+}
+
+.ItemDetailImage {
     width: 400px;
     height: 400px;
     border-radius: 5px;
 }
+
 .ItemDetailBox .ItemDetailName {
-    font-size: 40px;
-    color: #8598cd;
+    font-size: 35px;
 }
+
 .ItemDetailBox .ItemDetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.ItemDetailBox .ItemDetails h4 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.ItemDetailBox .ItemDetails p {
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.ItemDetailBox .ItemDetails .stock {
+    font-size: 18px;
+}
+
+.BottonDetail {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
-.ItemDetailBox .ItemDetails h4 {
+
+.TopDetails {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.topDetailNav {
     margin-top: 20px;
-    font-size: 25px;
-}
-.ItemDetailBox .ItemDetails p {
-    font-size: 30px;
-    color: #8598cd;
-    padding-top: 10px;
-}
-.ItemDetailBox .ItemDetails span {
+    padding: 10px;
     font-size: 20px;
-    color: #8598cd;
+    border-bottom: 1px solid #2d2d2d;
+    border-top: 1px solid #2d2d2d;
+}
+
+.topDetailNav a {
+    color: #2d2d2d;
 }

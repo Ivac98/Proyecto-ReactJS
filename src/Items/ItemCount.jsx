@@ -2,10 +2,9 @@ import './ItemCount.css'
 import { Link } from "react-router-dom"
 import { useState } from "react"
 
-const ItemCount = ({stock, onAdd}) => {
-    const [count, setCount] = useState (1)
+const ItemCount = ({ stock, onAdd }) => {
+    const [count, setCount] = useState(1)
     const [itemStock, setItemStock] = useState(stock)
-    const [visible, setVisible] = useState(true)
 
     const increment = () => {
         if (count < stock) {
@@ -22,19 +21,24 @@ const ItemCount = ({stock, onAdd}) => {
             setItemStock(itemStock - count)
             onAdd(count)
             setCount(1)
-            setVisible(false)
         }
     }
 
     return (
         <div className="Count">
-            <div className="SetToCart">
-                <button onClick={decrement}>-</button>
-                <span>{count}</span>
-                <button onClick={increment}>+</button>
+            <div className="addCart"> 
+                <div className="SetToCart">
+                    {itemStock > 0 ? <button onClick={decrement}>-</button> : ""}
+                    {itemStock > 0 ? <span>{count}</span> : ""}
+                    {itemStock > 0 ? <button onClick={increment}>+</button> : ""}
+                </div>
+                <div className="AddToCart">
+                    {(itemStock >= 1 ? <button onClick={AddToCart} > Agregar al carrito </button> : <button style={{cursor: 'default'}}>SIN STOCK</button>)}
+                </div>
             </div>
-            <div className="AddToCart">
-                {visible ? (itemStock >= 1 ? <button onClick={AddToCart} > Agregar al carrito </button> : <button>SIN STOCK</button>) : <Link to={"/cart"}>Terminar mi compra</Link>}
+            <Link to={"/cart"} className="endShop">Terminar mi compra</Link>
+            <div>
+                {itemStock > 10 ? <span>Stock Disponible</span> : (itemStock > 0 ? <span>Poco Stock</span> : <span>Sin stock</span>)}
             </div>
         </div>
     )
