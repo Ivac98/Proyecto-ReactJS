@@ -1,0 +1,6 @@
+VITE_apiKey = AIzaSyCYKR4Vr5pm56OrLCUbgJ8OYHcE9GsNiOE
+VITE_authDomain = ecommerce-artivst.firebaseapp.com
+VITE_projectId = ecommerce-artivst
+VITE_storageBucket = ecommerce-artivst.appspot.com
+VITE_messagingSenderId = 492919323334
+VITE_appId = 1:492919323334:web:298f05129c54f5fbf9f5c7
