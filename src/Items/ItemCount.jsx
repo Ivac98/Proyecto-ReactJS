@@ -38,7 +38,7 @@ const ItemCount = ({ stock, onAdd }) => {
             </div>
             <Link to={"/cart"} className="endShop">Terminar mi compra</Link>
             <div>
-                {itemStock > 10 ? <span>Stock Disponible</span> : (itemStock > 0 ? <span>Poco Stock</span> : <span>Sin stock</span>)}
+                {itemStock > 10 ? <span>Stock Disponible: {itemStock}</span> : (itemStock > 0 ? <span>Poco Stock</span> : <span>Sin stock</span>)}
             </div>
         </div>
     )

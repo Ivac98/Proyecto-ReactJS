@@ -6,7 +6,7 @@ import { collection, getDocs, getFirestore, query, where} from "firebase/firesto
 
 
 const ItemListContainer = () => {
-    const [items, setItems] = useState([]);
+    const [items, setItems] = useState();
     const [loading, setLoading] = useState(true)
     const {categoryId} = useParams()
     
